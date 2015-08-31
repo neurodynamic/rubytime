@@ -1,17 +1,10 @@
-// white: lighten(green,17);
 $home_red: lighten(red,25);
-$home_orange: orange;
-$home_yellow: yellow;
 $home_green: lighten(green,17);
 $home_blue: lighten(blue,25);
-$home_indigo: lighten(indigo,15);
 
 body {
   background-color: black;
   font-family: monospace;
-  // height: 100vh;
-  // display: flex;
-  // flex-direction: column;
 }
 
 h1 {
@@ -70,23 +63,23 @@ input {
 
   .time-format-1 {
     input {
-      color: $home_orange;
-      border-color: $home_orange;
+      color: orange;
+      border-color: orange;
     }
 
     .date-format-display {
-      background-color: $home_orange;
+      background-color: orange;
     }
   }
 
   .time-format-2 {
     input {
-      color: $home_yellow;
-      border-color: $home_yellow;
+      color: yellow;
+      border-color: yellow;
     }
 
     .date-format-display {
-      background-color: $home_yellow;
+      background-color: yellow;
     }
   }
 
