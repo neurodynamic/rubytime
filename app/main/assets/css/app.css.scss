@@ -43,6 +43,25 @@ input {
   }
 }
 
+button {
+  opacity: 0.7;
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+  color: black;
+  height: 42px;
+  font-size: 20px;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 aside {
   text-align: center;
   font-style: italic;

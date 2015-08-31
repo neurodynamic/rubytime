@@ -19,7 +19,38 @@ module Main
       time.strftime(format_string)
     end
 
+    def set_random_time
+      year = number_as_string_from(1900..Time.now.year)
+      month = number_as_string_from(1..12)
+      day = number_as_string_from(1..28)
+      hour = number_as_string_from(0..23)
+      minute = number_as_string_from(0..59)
+
+      page._selected_date = "#{year}-#{month}-#{day}"
+      page._selected_time = "#{hour}:#{minute}"
+    end
+
+    def set_time_to_now
+      page._selected_date = Time.now.strftime('%F')
+      page._selected_time = Time.now.strftime('%R')
+    end
+
+
+
     private
+
+    def number_as_string_from(range)
+      number = range.to_a.sample.to_s
+      zero_pad(number)
+    end
+
+    def zero_pad(number_string)
+      if number_string.length == 1
+        "0" + number_string
+      else
+        number_string
+      end
+    end
 
     # The main template contains a #template binding that shows another
     # template.  This is the path to that template.  It may change based
