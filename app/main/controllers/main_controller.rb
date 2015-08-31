@@ -16,7 +16,6 @@ module Main
       page._time_string_3 = '%B, %b, %m, %-m'
       page._time_string_4 = '%A, %a, %u, %w; %d, %-d'
       page._time_string_5 = '%H, %k, %I, %l:%M%P'
-      # Add code for when the index view is loaded
     end
 
     def display_time_as(format_string)
