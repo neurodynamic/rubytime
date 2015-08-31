@@ -31,13 +31,12 @@ set :default_env, { path: "/opt/rbenv/shims:$PATH" }
 # set :keep_releases, 5
 
 namespace :deploy do
-  # UNCOMMENTING THIS RESTART-ON-PUBLISH STUFF THROWS AN ENCODING ERROR AT PRESENT. HAVEN'T FIGURED OUT WHY YET.
-  # desc 'Restart application'
-  # task :restart do
-  #   on roles(:app), in: :sequence, wait: 5 do
-  #     execute :touch, release_path.join('tmp/restart.txt')
-  #   end
-  # end
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
 
-  # after :publishing, :restart
+  after :publishing, :restart
 end
