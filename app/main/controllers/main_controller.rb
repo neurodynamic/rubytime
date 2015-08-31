@@ -20,7 +20,7 @@ module Main
     end
 
     def set_random_time
-      year = number_as_string_from(1900..Time.now.year)
+      year = number_as_string_from(1950..Time.now.year)
       month = number_as_string_from(1..12)
       day = number_as_string_from(1..28)
       hour = number_as_string_from(0..23)
