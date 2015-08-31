@@ -1,7 +1,7 @@
 $home_red: lighten(red,25);
 $home_green: lighten(green,17);
 $home_blue: lighten(blue,25);
-$home_indigo: lighten(indigo,20);
+$home_indigo: lighten(indigo,25);
 
 body {
   background-color: black;
@@ -24,7 +24,7 @@ input {
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  opacity: 0.7;
+  opacity: 0.8;
 
   &:focus {
     box-shadow: none;
