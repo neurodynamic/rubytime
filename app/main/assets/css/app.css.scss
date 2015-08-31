@@ -1,0 +1,149 @@
+// white: lighten(green,17);
+$home_red: lighten(red,25);
+$home_orange: orange;
+$home_yellow: yellow;
+$home_green: lighten(green,17);
+$home_blue: lighten(blue,25);
+$home_indigo: lighten(indigo,15);
+
+body {
+  background-color: black;
+  font-family: monospace;
+  // height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: darken(red,10);
+  margin: 20px;
+}
+
+h2 {
+  color: darken(white, 30);
+}
+
+input {
+  background-color: black;
+  border-radius: 7px;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.7;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    opacity: 1.0;
+  }
+}
+
+.date-inputs {
+  text-align: center;
+  margin: 30px;
+
+  input {
+    border: 3px solid white;
+    color: white;
+  }
+}
+
+.date-formats {
+  input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .date-format-display {
+    color: black;
+    border-radius: 7px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px 0;
+  }
+
+  .time-format-1 {
+    input {
+      color: $home_orange;
+      border-color: $home_orange;
+    }
+
+    .date-format-display {
+      background-color: $home_orange;
+    }
+  }
+
+  .time-format-2 {
+    input {
+      color: $home_yellow;
+      border-color: $home_yellow;
+    }
+
+    .date-format-display {
+      background-color: $home_yellow;
+    }
+  }
+
+  .time-format-3 {
+    input {
+      color: $home_green;
+      border-color: $home_green;
+    }
+
+    .date-format-display {
+      background-color: $home_green;
+    }
+  }
+
+  .time-format-4 {
+    input {
+      color: $home_blue;
+      border-color: $home_blue;
+    }
+
+    .date-format-display {
+      background-color: $home_blue;
+    }
+  }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: gray;
+  color: black;
+  border-radius: 15px;
+
+  section {
+    background-color: lightgray;
+    padding: 0 30px;
+    margin: 20px 10px;
+    border-radius: 10px;
+    max-width: 45%;
+    min-width: 300px;
+
+    .definition {
+      display: flex;
+      justify-content: flex-start;
+
+      dd {
+        font-weight: bold;
+      }
+
+      dt {
+        font-weight: normal;
+        margin-left: 10px;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}

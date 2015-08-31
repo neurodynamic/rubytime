@@ -1,0 +1,143 @@
+<:Title>
+  WTF Time?!
+
+<:Body>
+  <div class="row date-inputs">
+    <input type="date" value="{{page._selected_date}}">
+    <input type="time" value="{{page._selected_time}}">
+  </div>
+  
+  <div class="date-formats">
+
+    <div class="row time-format-1">
+      <div class="col-sm-7">
+        <input type="text" value="{{page._time_string_1}}">
+      </div>
+      <div class="col-sm-5">
+        <div class="date-format-display">
+          {{display_time_as(page._time_string_1)}}
+        </div>
+      </div>
+    </div>
+    
+    <div class="row time-format-2">
+      <div class="col-sm-7">
+        <input type="text" value="{{page._time_string_2}}">
+      </div>
+      <div class="col-sm-5">
+        <div class="date-format-display">
+          {{display_time_as(page._time_string_2)}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row time-format-3">
+      <div class="col-sm-7">
+        <input type="text" value="{{page._time_string_3}}">
+      </div>
+      <div class="col-sm-5">
+        <div class="date-format-display">
+          {{display_time_as(page._time_string_3)}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row time-format-4">
+      <div class="col-sm-7">
+        <input type="text" value="{{page._time_string_4}}">
+      </div>
+      <div class="col-sm-5">
+        <div class="date-format-display">
+          {{display_time_as(page._time_string_4)}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Legend</h2>
+  <div class="legend">
+    <section class="year">
+      <h3>Year</h3>
+      <dl>
+        <div class="definition"><dd>%Y</dd><dt>Year with century</dt></div>
+        <div class="definition"><dd>%C</dd><dt>Year / 100</dt></div>
+        <div class="definition"><dd>%y</dd><dt>Year % 100</dt></div>
+      </dl>
+    </section>
+    <section class="month">
+      <h3>Month</h3>
+      <dl>
+        <div class="definition"><dd>%m</dd><dt>Month number, zero-padded</dt></div>
+        <div class="definition"><dd>%_m</dd><dt>Month number, blank-padded</dt></div>
+        <div class="definition"><dd>%-m</dd><dt>Month number, no-padded</dt></div>
+        <div class="definition"><dd>%B</dd><dt>Full month name</dt></div>
+        <div class="definition"><dd>%b, %h</dd><dt>Abbreviated month name</dt></div>
+      </dl>
+    </section>
+    <section class="day">
+      <h3>Day</h3>
+      <dl>
+        <div class="definition"><dd>%A</dd><dt>Day of the week name</dt></div>
+        <div class="definition"><dd>%a</dd><dt>Abbreviated day of the week name</dt></div>
+        <div class="definition"><dd>%u</dd><dt>Day of the week (Monday is 1, 1..7)</dt></div>
+        <div class="definition"><dd>%w</dd><dt>Day of the week (Sunday is 0, 0..6)</dt></div>
+        <div class="definition"><dd>%d</dd><dt>Day of the Month, zero-padded</dt></div>
+        <div class="definition"><dd>%-d</dd><dt>Day of the Month, no-padded</dt></div>
+        <div class="definition"><dd>%e</dd><dt>Day of the Month, blank-padded</dt></div>
+        <div class="definition"><dd>%j</dd><dt>Day of the Year, zero-padded</dt></div>
+      </dl>
+    </section>
+    <section class="time">
+      <h3>Time</h3>
+      <dl>
+        <div class="definition"><dd>%H</dd><dt>Hour of the day, 24-hour clock, zero-padded</dt></div>
+        <div class="definition"><dd>%k</dd><dt>Hour of the day, 24-hour clock, blank-padded</dt></div>
+        <div class="definition"><dd>%I</dd><dt>Hour of the day, 12-hour clock, zero-padded</dt></div>
+        <div class="definition"><dd>%l</dd><dt>Hour of the day, 12-hour clock, blank-padded</dt></div>
+        <div class="definition"><dd>%P</dd><dt>AM or PM</dt></div>
+        <div class="definition"><dd>%p</dd><dt>am or pm</dt></div>
+        <div class="definition"><dd>%M</dd><dt>Minute of the hour, zero-padded</dt></div>
+        <div class="definition"><dd>%S</dd><dt>Second of the minute, zero-padded</dt></div>
+        <div class="definition"><dd>%L, %3N</dd><dt>Millisecond of the second, zero-padded</dt></div>
+        <div class="definition"><dd>%6N</dd><dt>Microsecond of the second</dt></div>
+        <div class="definition"><dd>%N, %9N</dd><dt>Nanosecond of the second</dt></div>
+      </dl>
+    </section>
+    <section class="weeks">
+      <h3>Weeks</h3>
+      <dl>
+        <div class="definition"><dd>%G</dd><dt>The week-based year</dt></div>
+        <div class="definition"><dd>%g</dd><dt>The last 2 digits of the week-based year</dt></div>
+        <div class="definition"><dd>%V</dd><dt>Week number of the week-based year (01..53)</dt></div>
+        <div class="definition"><dd>%U</dd><dt>Week number of the year.  The week starts with Sunday.</dt></div>
+        <div class="definition"><dd>%W</dd><dt>Week number of the year.  The week starts with Monday.</dt></div>
+      </dl>
+    </section>
+    <section class="other">
+      <h3>Other</h3>
+      <dl>
+        <div class="definition"><dd>%z</dd><dt>Time zone as hour and minute offset from UTC</dt></div>
+        <div class="definition"><dd>%Z</dd><dt>Time zone abbreviation name</dt></div>
+
+        <div class="definition"><dd>%s</dd><dt>Number of seconds since Unix Epoch</dt></div>
+        <div class="definition"><dd>%Q</dd><dt>Number of microseconds since Unix Epoch</dt></div>
+
+        <div class="definition"><dd>%n</dd><dt>Newline</dt></div>
+        <div class="definition"><dd>%t</dd><dt>Tab</dt></div>
+        <div class="definition"><dd>%%</dd><dt>Percent</dt></div>
+      </dl>
+    </section>
+    <section class="Combinations">
+      <h3>Combinations</h3>
+      <dl>
+        <div class="definition"><dd>%c</dd><dt>date and time (%a %b %e %T %Y)</dt></div>
+        <div class="definition"><dd>%D, %x</dd><dt>Date (%m/%d/%y)</dt></div>
+        <div class="definition"><dd>%F</dd><dt>The ISO 8601 date format (%Y-%m-%d)</dt></div>
+        <div class="definition"><dd>%v</dd><dt>VMS date (%e-%b-%Y)</dt></div>
+        <div class="definition"><dd>%r</dd><dt>12-hour time (%I:%M:%S %p)</dt></div>
+        <div class="definition"><dd>%R</dd><dt>24-hour time (%H:%M)</dt></div>
+        <div class="definition"><dd>%T, %X</dd><dt>24-hour time (%H:%M:%S)</dt></div>
+        <div class="definition"><dd>%+</dd><dt>date(1) (%a %b %e %H:%M:%S %Z %Y)</dt></div>
+      </dl>
+    </section>
+  </div>
