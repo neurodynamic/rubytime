@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+# Reference: http://stackoverflow.com/questions/31036672/invalidbytesequenceerror-deploying-volt-via-intercity/31279290
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
+gem 'capistrano'
+gem "capistrano-bundler"
+
 gem 'volt', '0.9.4'
 
 # volt uses mongo as the default data store.
