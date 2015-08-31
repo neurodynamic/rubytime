@@ -2,8 +2,14 @@
 module Main
   class MainController < Volt::ModelController
     def index
-      page._selected_date = "#{Time.now.strftime('%Y')}-0#{(1..9).to_a.sample}-0#{(1..9).to_a.sample}"
-      page._selected_time = "#{(13..23).to_a.sample}:#{(10..59).to_a.sample}"
+      year = Time.now.strftime('%Y')
+      month = number_as_string_from(1..9)
+      day = number_as_string_from(1..9)
+      hour = number_as_string_from(13..23)
+      minute = number_as_string_from(0..59)
+
+      page._selected_date = "#{year}-#{month}-#{day}"
+      page._selected_time = "#{hour}:#{minute}"
 
       page._time_string_1 = '%l:%M%P %A, %B %-m, %Y'
       page._time_string_2 = '%Y, %C, %y'
