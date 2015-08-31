@@ -1,6 +1,7 @@
 $home_red: lighten(red,25);
 $home_green: lighten(green,17);
 $home_blue: lighten(blue,25);
+$home_indigo: lighten(indigo,20);
 
 body {
   background-color: black;
@@ -40,6 +41,12 @@ input {
     border: 3px solid white;
     color: white;
   }
+}
+
+aside {
+  text-align: center;
+  font-style: italic;
+  color: darken(white, 20);
 }
 
 .date-formats {
@@ -102,6 +109,17 @@ input {
 
     .date-format-display {
       background-color: $home_blue;
+    }
+  }
+
+  .time-format-5 {
+    input {
+      color: $home_indigo;
+      border-color: $home_indigo;
+    }
+
+    .date-format-display {
+      background-color: $home_indigo;
     }
   }
 }

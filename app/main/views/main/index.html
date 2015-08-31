@@ -6,14 +6,18 @@
     <input type="date" value="{{page._selected_date}}">
     <input type="time" value="{{page._selected_time}}">
   </div>
-  
+  <aside>
+    <p>
+      Date and time are randomly generated. Change them if you like.
+    </p>
+  </aside>
   <div class="date-formats">
 
     <div class="row time-format-1">
-      <div class="col-sm-7">
+      <div class="col-sm-6">
         <input type="text" value="{{page._time_string_1}}">
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-6">
         <div class="date-format-display">
           {{display_time_as(page._time_string_1)}}
         </div>
@@ -21,10 +25,10 @@
     </div>
     
     <div class="row time-format-2">
-      <div class="col-sm-7">
+      <div class="col-sm-6">
         <input type="text" value="{{page._time_string_2}}">
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-6">
         <div class="date-format-display">
           {{display_time_as(page._time_string_2)}}
         </div>
@@ -32,10 +36,10 @@
     </div>
 
     <div class="row time-format-3">
-      <div class="col-sm-7">
+      <div class="col-sm-6">
         <input type="text" value="{{page._time_string_3}}">
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-6">
         <div class="date-format-display">
           {{display_time_as(page._time_string_3)}}
         </div>
@@ -43,12 +47,23 @@
     </div>
 
     <div class="row time-format-4">
-      <div class="col-sm-7">
+      <div class="col-sm-6">
         <input type="text" value="{{page._time_string_4}}">
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-6">
         <div class="date-format-display">
           {{display_time_as(page._time_string_4)}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row time-format-5">
+      <div class="col-sm-6">
+        <input type="text" value="{{page._time_string_5}}">
+      </div>
+      <div class="col-sm-6">
+        <div class="date-format-display">
+          {{display_time_as(page._time_string_5)}}
         </div>
       </div>
     </div>
