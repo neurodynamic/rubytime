@@ -6,7 +6,7 @@ module Main
       page._selected_time = Time.now.strftime('%R')
       page._time_string_1 = '%R on %D'
       page._time_string_2 = '%l:%M%P %A, %B %-m, %Y'
-      page._time_string_3 = 'Day %j, week %U of %Y'
+      page._time_string_3 = 'Day %j, week %V of %Y'
       page._time_string_4 = '%s seconds past Unix Epoch'
       # Add code for when the index view is loaded
     end
