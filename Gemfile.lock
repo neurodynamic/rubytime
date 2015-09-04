@@ -142,7 +142,6 @@ GEM
       sprockets-sass (~> 1.0.0)
       thor (~> 0.19.0)
     volt-bootstrap (0.0.10)
-    volt-bootstrap_jumbotron_theme (0.1.0)
     volt-mongo (0.1.1)
       mongo (~> 1.9.0)
     websocket (1.2.2)
@@ -173,5 +172,4 @@ DEPENDENCIES
   uglifier (>= 2.4.0)
   volt (= 0.9.4)
   volt-bootstrap (~> 0.0.10)
-  volt-bootstrap_jumbotron_theme (~> 0.1.0)
   volt-mongo (~> 0.1.0)
