@@ -8,6 +8,10 @@ body {
   font-family: monospace;
 }
 
+.notices.alert.alert-info {
+  display: none;
+}
+
 h1 {
   text-align: center;
   color: darken(red,10);
