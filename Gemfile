@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 # Reference: http://stackoverflow.com/questions/31036672/invalidbytesequenceerror-deploying-volt-via-intercity/31279290
 Encoding.default_external = Encoding::UTF_8
