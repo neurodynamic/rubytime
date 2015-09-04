@@ -8,6 +8,9 @@ body {
   font-family: monospace;
 }
 
+// Notices commented out because of connectivity alerts
+// popping up when deployed on PWS. Connectivity alerts
+// are irrelevant since the app does not need a DB
 .notices.alert.alert-info {
   display: none;
 }
