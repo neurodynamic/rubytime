@@ -8,7 +8,7 @@ Encoding.default_internal = Encoding::UTF_8
 gem 'capistrano'
 gem "capistrano-bundler"
 
-gem 'volt', '0.9.4'
+gem 'volt', '0.9.5'
 
 # volt uses mongo as the default data store.
 gem 'volt-mongo', '~> 0.1.0'
