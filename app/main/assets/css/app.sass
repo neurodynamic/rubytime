@@ -1,0 +1,159 @@
+$home_red: lighten(red,25)
+$home_green: lighten(green,17)
+$home_blue: lighten(blue,25)
+$home_indigo: lighten(indigo,25)
+
+body
+  // background-color: black
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url(image-path('app/main/assets/images/pocketwatch.jpg')) repeat 0 0
+  background-attachment: fixed
+  
+  font-family: monospace
+
+// Notices commented out because of connectivity alerts
+// popping up when deployed on PWS. Connectivity alerts
+// are irrelevant since the app does not need a DB
+.notices.alert.alert-info
+  display: none
+
+h1
+  text-align: center
+  color: darken(red,10)
+  margin: 20px
+
+h2
+  color: darken(white, 30)
+
+input
+  background-color: black
+  border-radius: 7px
+  font-size: 20px
+  padding-left: 20px
+  padding-right: 20px
+  opacity: 0.8
+  margin: 5px
+
+  &:focus
+    box-shadow: none
+    outline: none
+    opacity: 1.0
+
+.date-inputs
+  text-align: center
+  margin: 30px
+
+  input
+    border: 3px solid white
+    color: white
+
+button
+  opacity: 0.7
+  background-color: white
+  border-radius: 7px
+  color: black
+  height: 37px
+  font-size: 20px
+
+  &:focus
+    box-shadow: none
+    outline: none
+
+  &:hover
+    opacity: 0.9
+
+aside
+  text-align: center
+  font-style: italic
+  color: darken(white, 20)
+
+.date-formats
+  margin: 50px 0 100px
+
+  input
+    width: 100%
+    margin: 10px 0
+
+  .date-format-display
+    color: black
+    border-radius: 7px
+    font-size: 20px
+    padding-left: 20px
+    padding-right: 20px
+    margin: 10px 0
+    min-width: 20px
+    min-height: 30px
+
+  .time-format-1
+    input
+      color: orange
+      border-color: orange
+
+    .date-format-display
+      background-color: orange
+
+  .time-format-2
+    input
+      color: yellow
+      border-color: yellow
+
+    .date-format-display
+      background-color: yellow
+
+  .time-format-3
+    input
+      color: $home_green
+      border-color: $home_green
+
+    .date-format-display
+      background-color: $home_green
+
+  .time-format-4
+    input
+      color: $home_blue
+      border-color: $home_blue
+
+    .date-format-display
+      background-color: $home_blue
+
+  .time-format-5
+    input
+      color: $home_indigo
+      border-color: $home_indigo
+
+    .date-format-display
+      background-color: $home_indigo
+
+.legend
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  background-color: rgba(white, 0.5)
+  color: black
+  border-radius: 15px
+  margin: 0 0 20px 0
+
+  section
+    background-color: rgba(white, 0.7)
+    padding: 0 30px
+    margin: 20px 10px
+    border-radius: 10px
+    max-width: 45%
+    min-width: 300px
+    flex: 1 1
+
+    .definition
+      display: flex
+      justify-content: flex-start
+
+      dd
+        font-weight: bold
+
+      dt
+        font-weight: normal
+        margin-left: 10px
+        font-style: italic
+
+footer
+  text-align: center
+  font-size: 18px
+  padding: 20px
