@@ -21,8 +21,7 @@ module Main
     end
 
     def display_time_as(format_string)
-      time = Time.parse("#{page._selected_time} #{page._selected_date}")
-
+      time = Time.parse("#{page._selected_time.to_s} #{page._selected_date.to_s}")
       time.strftime(format_string)
     end
 
