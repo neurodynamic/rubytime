@@ -9,6 +9,7 @@ gem 'capistrano'
 gem "capistrano-bundler"
 
 gem 'volt', '0.9.5'
+gem 'opal-jquery'
 
 # volt uses mongo as the default data store.
 gem 'volt-mongo', '~> 0.1.0'

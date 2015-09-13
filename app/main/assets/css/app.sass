@@ -4,20 +4,19 @@ $home_blue: lighten(blue,25)
 $home_indigo: lighten(indigo,25)
 
 body
-  // background-color: black
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url(image-path('app/main/assets/images/pocketwatch.jpg')) repeat 0 0
+  background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0.95) 100%), url(image-path('app/main/assets/images/pocketwatch.jpg'))
   background-attachment: fixed
-
   font-family: monospace
 
-.container-fluid
-  padding: 0
+.page-flexbox-wrapper
+  display: flex
+  min-height: 100vh
+  flex-direction: column
 
-// Notices commented out because of connectivity alerts
-// popping up when deployed on PWS. Connectivity alerts
-// are irrelevant since the app does not need a DB
-.notices.alert.alert-info
-  display: none
+main
+  flex: 1 1 auto
+  display: flex
+  flex-direction: column
 
 h1
   text-align: center
@@ -26,36 +25,40 @@ h1
 
 h2
   color: darken(white, 30)
+  margin: 0
+
+.tooltip
+  font-size: 18px
 
 input
   background-color: black
   border-radius: 7px
-  font-size: 20px
+  font-size: 22px
   padding-left: 20px
   padding-right: 20px
   opacity: 0.8
   margin: 5px
+  border: 3px solid white
+  color: white
+  margin: 10px auto
+  height: 40px
 
   &:focus
     box-shadow: none
     outline: none
     opacity: 1.0
 
-.date-inputs
-  text-align: center
-  margin: 30px
-
-  input
-    border: 3px solid white
-    color: white
+  &.date-string-input
+    min-width: 475px
 
 button
-  opacity: 0.7
-  background-color: white
+  background-color: rgba(white,0.85)
   border-radius: 7px
+  border: none
   color: black
-  height: 37px
   font-size: 20px
+  padding: 10px 20px
+  margin: 10px auto
 
   &:focus
     box-shadow: none
@@ -64,102 +67,83 @@ button
   &:hover
     opacity: 0.9
 
-aside
-  text-align: center
-  font-style: italic
-  color: darken(white, 20)
-
-.date-formats
-  margin: 50px 0 100px
-
-  input
-    width: 100%
-    margin: 10px 0
-
-  .date-format-display
-    color: black
-    border-radius: 7px
-    font-size: 20px
-    padding-left: 20px
-    padding-right: 20px
-    margin: 10px 0
-    min-width: 20px
-    min-height: 30px
-    opacity: 0.8
-
-  .time-format-1
-    input
-      color: orange
-      border-color: orange
-
-    .date-format-display
-      background-color: orange
-
-  .time-format-2
-    input
-      color: yellow
-      border-color: yellow
-
-    .date-format-display
-      background-color: yellow
-
-  .time-format-3
-    input
-      color: $home_green
-      border-color: $home_green
-
-    .date-format-display
-      background-color: $home_green
-
-  .time-format-4
-    input
-      color: $home_blue
-      border-color: $home_blue
-
-    .date-format-display
-      background-color: $home_blue
-
-  .time-format-5
-    input
-      color: $home_indigo
-      border-color: $home_indigo
-
-    .date-format-display
-      background-color: $home_indigo
-
-.legend
+.date-reference
   display: flex
-  flex-wrap: wrap
-  justify-content: space-around
-  background-color: rgba(white, 0.5)
-  color: black
-  border-radius: 15px
-  margin: 0 0 20px 0
+  flex-direction: column
 
-  section
-    background-color: rgba(white, 0.7)
-    padding: 0 30px
-    margin: 20px 10px
-    border-radius: 10px
-    max-width: 45%
-    min-width: 300px
-    flex: 1 1
+  
+  .date-controls
+    text-align: center
 
-    .definition
+    h2
+      margin: auto
+      width: 75%
+
+
+  .date-formatting-display
+    margin: 80px
+    display: flex
+    flex-wrap: wrap
+    color: rgba(white,0.85)
+    max-width: 100%
+    flex-direction: column
+
+    .list
+      margin: 3px
       display: flex
-      justify-content: flex-start
+      align-content: flex-start
+      h3
+        min-width: 80px
+        margin: 5px 0 0 0
 
-      dd
-        font-weight: bold
+      ul
+        margin: 4px 0 0 0
+        flex: 1 1
+        list-style: none
+        padding: 0
+        display: flex
+        flex-wrap: wrap
 
-      dt
-        font-weight: normal
-        margin-left: 10px
-        font-style: italic
+        li
+          margin: 4px 6px
+          padding: 3px 8px 
+          text-align: center
+          border-radius: 5px
+          font-size: 17px
+          background-color: rgba(white,0.2)
+
+          .code
+            font-weight: bold
+            display: inline
+
+          .string
+            background-color: rgba(black,0.6)
+            border-radius: 4px
+            padding: 1px 8px
+            display: inline
+
+.formatted-date-string
+  font-size: 24px
+  color: rgba(white, 0.85)
+  width: 80%
+  margin: auto
+
+
+.legend-header
+  margin: 60px 7% 15px
 
 footer
-  width: 100%
-  background-color: rgba(white,0.8)
+  ul.links
+    list-style: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    li
+      margin: 0 20px
+
+  color: rgba(white,0.5)
+  background-color: rgba(black,0.85)
   text-align: center
   font-size: 18px
   padding: 20px

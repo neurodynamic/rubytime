@@ -1,3 +1,5 @@
+require 'opal/jquery'
+
 # By default Volt generates this controller for your Main component
 module Main
   class MainController < Volt::ModelController
@@ -11,11 +13,11 @@ module Main
       page._selected_date = "#{year}-#{month}-#{day}"
       page._selected_time = "#{hour}:#{minute}"
 
-      page._time_string_1 = '%l:%M%P %A, %B %-m, %Y'
-      page._time_string_2 = '%Y, %C, %y'
-      page._time_string_3 = '%B, %b, %m, %-m'
-      page._time_string_4 = '%A, %a, %u, %w; %d, %-d'
-      page._time_string_5 = '%H, %k, %I, %l:%M%P'
+      page._time_string = '%l:%M%P %A, %B %-m, %Y'
+
+      Document.ready? do 
+        `$('[data-toggle="tooltip"]').tooltip();`
+      end
     end
 
     def display_time_as(format_string)
@@ -55,6 +57,73 @@ module Main
       else
         number_string
       end
+    end
+
+    def string_format_codes
+      {
+        year: 
+        [
+          ['%Y','Year with century'],
+          ['%C','Year / 100'],
+          ['%y','Year % 100']
+        ],
+
+        month: 
+        [
+          ['%m','Month number, zero-padded'],
+          ['%_m','Month number, blank-padded'],
+          ['%-m','Month number, no-padded'],
+          ['%B','Full month name'],
+          ['%b','Abbreviated month name']
+        ],
+
+        week: 
+        [
+          ['%V','Week number of the week-based year (01..53)']
+        ],
+
+        day: 
+        [
+          ['%A','Day of the week name'],
+          ['%a','Abbreviated day of the week name'],
+          ['%u','Day of the week (Monday is 1, 1..7)'],
+          ['%w','Day of the week (Sunday is 0, 0..6)'],
+          ['%d','Day of the Month, zero-padded'],
+          ['%-d','Day of the Month, no-padded'],
+          ['%e','Day of the Month, blank-padded'],
+          ['%j','Day of the Year, zero-padded']
+        ],
+
+        time: 
+        [
+          ['%H','Hour of the day, 24-hour clock, zero-padded'],
+          ['%k','Hour of the day, 24-hour clock, blank-padded'],
+          ['%I','Hour of the day, 12-hour clock, zero-padded'],
+          ['%l','Hour of the day, 12-hour clock, blank-padded'],
+          ['%P','AM or PM'],
+          ['%p','am or pm'],
+          ['%M','Minute of the hour, zero-padded'],
+          ['%S','Second of the minute, zero-padded']
+        ],
+
+        other: 
+        [
+          ['%z','Time zone as hour and minute offset from UTC'],
+          ['%Z','Time zone abbreviation name'],
+          ['%s','Number of seconds since Unix Epoch']
+        ],
+
+        combo: 
+        [
+          ['%c','date and time (%a %b %e %T %Y)'],
+          ['%D','Date (%m/%d/%y)'],
+          ['%F','The ISO 8601 date format (%Y-%m-%d)'],
+          ['%v','VMS date (%e-%b-%Y)'],
+          ['%r','12-hour time (%I:%M:%S %p)'],
+          ['%R','24-hour time (%H:%M)'],
+          ['%T','24-hour time (%H:%M:%S)']
+        ]
+      }
     end
 
     # The main template contains a #template binding that shows another

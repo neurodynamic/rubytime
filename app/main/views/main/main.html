@@ -2,35 +2,30 @@
   {{ view main_path, "title", {controller_group: 'main'} }}
 
 <:Body>
-  <div class="container-fluid">
+  <div class="page-flexbox-wrapper">
     <header>
       <h1>DateTime formatting. Ew.</h1>
     </header>
 
-    <:volt:notices />
-
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        {{ view main_path, 'body', {controller_group: 'main'} }}
-      </div>
-    </div>
+    <main>
+      {{ view main_path, 'body', {controller_group: 'main'} }}
+    </main>
 
     <footer>
-      <div class="row">
-        <div class="col-xs-4">
+      <ul class="links">
+        <li>
           <a href="http://www.neurodynamic.io">
-            <p>&copy; Neurodynamic {{ Time.now.year }}</p>
+            &copy;&nbsp;Neurodynamic {{ Time.now.year }}
           </a>
-        </div>
-        <div class="col-xs-4">
-          Powered by <a href="https://github.com/voltrb/volt">the Volt Framework</a>  
-        </div>
-        <div class="col-xs-4">
+        </li>
+        <li>
+          Powered by <a href="https://github.com/voltrb/volt">the Volt Framework</a> 
+        </li>
+        <li>
           Full strftime method info <a href="http://apidock.com/ruby/DateTime/strftime">at APIDock</a>  
-        </div>
-      </div>
+        </li>
+      </ul>
     </footer>
-
   </div>
 
 <:Nav>
