@@ -7,19 +7,8 @@
     <div class="date-controls">
       <h2>Set Date and Time:</h2>
       <div class="inputs">
-
-        {{if `Modernizr.inputtypes.date`}}
-          <input type="date" value="{{page._selected_date}}">
-        {{ else }}
-          <input type="text" value="{{page._selected_date}}">
-        {{ end }}
-
-        {{if `Modernizr.inputtypes.time`}}
-          <input type="time" value="{{page._selected_time}}">
-        {{ else }}
-          <input type="text" value="{{page._selected_time}}">
-        {{ end }}
-
+        <input type="date" value="{{page._selected_date}}">
+        <input type="time" value="{{page._selected_time}}">
       </div>
       <div class="buttons">
         <button e-click="set_random_time">Randomize</button>
