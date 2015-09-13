@@ -24,11 +24,10 @@ module Main
       year, month, day = page._selected_date.split('-')
 
       month_abbr = months[month.to_i-1]
-
+      
       time_with_seconds = page._selected_time + ':00'
 
       time_string = "#{month_abbr} #{day} #{time_with_seconds} #{year}"
-      
       time = Time.parse(time_string)
       time.strftime(format_string)
     end
