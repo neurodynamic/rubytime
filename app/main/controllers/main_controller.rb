@@ -21,8 +21,20 @@ module Main
     end
 
     def display_time_as(format_string)
-      time = Time.parse("#{page._selected_time.to_s} #{page._selected_date.to_s}")
+      year, month, day = page._selected_date.split('-')
+
+      month_abbr = months[month.to_i-1]
+
+      time_with_seconds = page._selected_time + ':00'
+
+      time_string = "#{month_abbr} #{day} #{time_with_seconds} #{year}"
+      
+      time = Time.parse(time_string)
       time.strftime(format_string)
+    end
+
+    def months
+      ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
     end
 
     def set_random_time
@@ -63,7 +75,6 @@ module Main
         year: 
         [
           ['%Y','Year with century'],
-          ['%C','Year / 100'],
           ['%y','Year % 100']
         ],
 

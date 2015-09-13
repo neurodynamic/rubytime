@@ -1,5 +1,5 @@
 ---
 applications:
 - name: wtf-time
-  memory: 256M
+  memory: 512M
   # host: nifty
